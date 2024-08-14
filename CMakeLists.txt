@@ -1,3 +1,9 @@
+# Check if ROS_EDITION is already defined
+if(NOT DEFINED ROS_EDITION)
+    # If not, set it to "ROS1"
+    set(ROS_EDITION "ROS1")
+endif()
+
 # judge which cmake codes to use 
 if(ROS_EDITION STREQUAL "ROS1")
 
